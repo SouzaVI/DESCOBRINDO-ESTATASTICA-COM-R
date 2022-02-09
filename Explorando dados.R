@@ -10,35 +10,37 @@ library(fBasics)
 library(openxlsx)
 
 
-#CARREGANDO DADOS CARGA DE MATERIAL COMBUSTIVEL X ALTURA DIGITAL
+#                            CARREGANDO DADOS
 
-CARGA <- read_excel("dados_1_cmt.xlsx")
+DADOS <- read_excel("DADOS.xlsx")
 
-# AVALIANDO DISTRIBUIÇÃO GRAFICAMENTE #
+#-------------------------------------------------------------------------------
+
+#                 AVALIANDO DISTRIBUICAO GRAFICAMENTE #
 
 # 1º OPÇÃO
-hist(CARGA$CMT,
+hist(DADOS$Y,
      col = "#FF8C00",
      freq = F,
-     main = "Histograma de Frequência de Carga de Material Combustível",
-     xlab= "Carga de Material Combustível (T/ha)"
+     main = "Histograma de Frequência de Y",
+     xlab= "Y"
      )
-curve(dnorm(x, mean = mean(CARGA$CMT), sd = sd(CARGA$CMT)), add = T)
+curve(dnorm(x, mean = mean(DADOS$Y), sd = sd(DADOS$Y)), add = T)
 
 #2º OPÇÃO GGPLOT
 
-ggplot(CARGA)+
-  aes(x = CMT)+
+ggplot(DADOS)+
+  aes(x = Y)+
   geom_histogram(fill= "#FF8C00",
                  col= "#4F4F4F",
-                 bins = 10,
+                 bins = 5,
                  aes(y =..density..))+
   theme_minimal()+
-  stat_function(fun = dnorm, args = list(mean = mean(CARGA$CMT), sd=sd(CARGA$CMT)))
+  stat_function(fun = dnorm, args = list(mean = mean(DADOS$Y), sd=sd(DADOS$Y)))
 
-## BOXPLOT
+# BOXPLOT
 
-boxplot(CARGA$CMT,
+boxplot(DADOS$Y,
         ylab = "Carga de Material Combustível (T/ha)",
         col = "#FF8C00",
         border = "#4F4F4F",
@@ -46,68 +48,40 @@ boxplot(CARGA$CMT,
         notch = F
 )
 
-basicStats(CARGA$CMT) # RESUMO ESTATISTICO BASICO
+basicStats(DADOS$Y) # RESUMO ESTATISTICO BASICO
 
+#-------------------------------------------------------------------------------
+#                      AVALIANDO NORMALIDADE
+summary(DADOS$Y)
+shapiro.test(DADOS$Y)
+qqnorm(DADOS$Y)
+qqline(DADOS$Y)
+qqPlot(DADOS$Y, dist='norm',envelope=.95)
 
-## VALIANDO NORMALIDADE ##
-summary(CARGA$CMT)
-shapiro.test(CARGA$CMT)
-qqnorm(CARGA$CMT)
-qqline(CARGA$CMT)
-qqPlot(CARGA$CMT, dist='norm',envelope=.95)
+#-------------------------------------------------------------------------------
+#                                NOTA
+# DADOS APRESENTAM NORMALIDADE##
+# CASO SEUS DADOS NAO APRESENTAM DISTRIBUICAO NORMAL, VOCE DEVERA NORMALIZAR,
+# CASO AO CONTRARIO VERIFICAR O MOTIVO
+# CASO SEUS DADOS TENHAM ESSA TENDENCIA DE ANORMALIDADE NA DISTRIBUICAO, UTILIZE
+# METODOS NAO - PARAMETRICOS PARA SUAS ANALISES ESTATISTICAS
+#-------------------------------------------------------------------------------
 
-## DADOS NAO APRESENTAM NORMALIDADE##
+#                   AVALIANDO ERRO AMOSTRAL DO EXPERIMENTO
 
-####################################################
+## VERIFICAR SE SEU NUMERO DE AMOSTRA E SUFICIENTE PARA ANALISES ESTATISTICA CONFIAVEL
 
-## CORRIGINDO ANORMALIDADE ##
+t=2.20009 # VALOR T - GRAU DE LIBERDADE (12-1 = 11) E ALFA 5%
+ERRO_PADRAO_DA_MEDIA = 2.34/sqrt(12) # raiz(desvio padrao/raiz(nº de amostra)) # verificar informacao no resumo estatistico do basicStasts
+media=mean(DADOS$Y)
+ERRO_AMOSTRAL = (ERRO_PADRAO_DA_MEDIA*t/media)*100
 
-## POR TRANSFORMACAO ##
-
-CMTRAIZ <- sqrt(CARGA$CMT)
-HCRAIZ<-sqrt(CARGA$HC) ## PARA AS ANALISES FUTURAS, A ALTURA (HC) DEVE ESTA TRANSFORMADAS
-
-##AVALIANDO NOVAMENTE NORMALIDADE
-
-summary(CMTRAIZ)
-shapiro.test(CMTRAIZ)
-qqnorm(CMTRAIZ)
-qqline(CMTRAIZ)
-qqPlot(CMTRAIZ, dist='norm',envelope=.95)
-
-##DADOS NORMALIZADO##
-
-####################################################
-
-## CRIAR UM NOVO DATA FRAME PARA OS DADOS TRANSFORMADOS
-
-CARGA_NORMALIZADA<-data.frame(CMTRAIZ,HCRAIZ )
-
-##AVALIAR GRAFICAMENTE A DISTRIBUICAO POS TRANSFORMACAO ##
-
-boxplot(CARGA_NORMALIZADA$CMTRAIZ,
-        ylab = "Carga de Material Combustível (T/ha)",
-        col = "#FF8C00",
-        border = "#4F4F4F",
-        horizontal = F,
-        notch = F
-)
-
-ggplot(CARGA_NORMALIZADA)+
-  aes(x = CMTRAIZ)+
-  geom_histogram(fill= "#FF8C00",
-                 col= "#4F4F4F",
-                 bins = 10,
-                 aes(y =..density..))+
-  theme_minimal()+
-  stat_function(fun = dnorm, args = list(mean = mean(CARGA_NORMALIZADA$CMTRAIZ), sd=sd(CARGA_NORMALIZADA$CMTRAIZ)))
-
-
-##EXPORTAR DATAFRAME
-write.xlsx(CARGA_NORMALIZADA, "CARGA_NORMALIZADA.xlsx", overwrite = TRUE)
-
-
-
+ERRO_AMOSTRAL
+#-------------------------------------------------------------------------------
+#                                NOTA
+## O NUMERO DE AMOSTRAS FORAM SUFICIENTES, A NIVEL DE 5% DE PROBILIDADE COM ERRO
+# INFERIOR A 10%
+#-------------------------------------------------------------------------------
 
 
 
