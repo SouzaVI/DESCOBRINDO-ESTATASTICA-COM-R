@@ -1,10 +1,10 @@
 
 # DESCOBRINDO ESTATÍSTICA COM R  
 
-O que você irá aprender neste projeto?
+•O que você irá aprender neste projeto?
 
 Muitos estudantes quando iniciam seus estudos e precisam avaliar estatísticamente seus trabalhos, acabam
-se perdendo ou desesperando por ver equações estatísticas e cálculos complexos.
+se perdendo ou  se desesperando por ver equações estatísticas e cálculos complexos.
 
 Você que não entende 0% de estatística recomendo o livro "Descobrindo a Estatística usando SPPS" de Andy Field,
 é Fantástico na abordagem da estatística. Com uma linguagem amigável e divertida, você aprende o suficiente para
@@ -15,15 +15,15 @@ Com essa inspiração estou criando rotinas de análises no ambiente R, na qual,
 
 1. EXPLORANDO DADOS
 
-Nesse capítulo inicial, devemos nos preocupar se nossos dados possuem normalidade.
+Nessa parte inicial, devemos nos preocupar se nossos dados possuem normalidade.
 
- Para algo ser avaliado e replicado, é necessário que esses dados sejam confiáveis. Quantos mais seus dados variarem entre si, maiores chances dos seus dados serem anormais.
+Para algo ser avaliado e replicado, é necessário que esses dados sejam confiáveis. Quantos mais seus dados variarem entre si, maiores chances dos seus dados serem anormais.
  
- E o que isso implica em meu trabalho?
+•E o que isso implica em meu trabalho?
  
- Quando seus dados possuem distribuição anormal, todos as análises deverão ser com base em estatísticas Não - Pararamétricas. Lembre-se, a forma que você coleta, delineamento e tipo da população amostrada, interferem diretamente na forma que você avaliará seus dados! Portanto, caprichem no planejamento do seu trabalho. O ideal, antes de montar um grande planejamento é trabalhar com um experimento piloto, para avaliar sua população amostrada, dessa maneira, você consegui entender melhor o comportamento da população amostrada e com base nisso defini melhor os plajamento final.
+Quando seus dados possuem distribuição anormal, todos as análises deverão ser com base em estatísticas Não - Pararamétricas. Lembre-se, a forma que você coleta, delineamento e tipo da população amostrada, interferem diretamente na forma que você avaliará seus dados! Portanto, caprichem no planejamento do seu trabalho. O ideal, antes de montar um grande planejamento é trabalhar com um experimento piloto, para avaliar sua população amostrada, dessa maneira, você consegui entender melhor o comportamento da população amostrada e com base nisso defini melhor os plajamento final.
  
- Como posso avaliar se meus dados se são paramétricos ou não - parâmetricos?
+•Como posso avaliar se meus dados se são paramétricos ou não - parâmetricos?
  
  1º Avalie com base histograma e boxplot, e observe se seus dados estão distribuidos normalmente
  
