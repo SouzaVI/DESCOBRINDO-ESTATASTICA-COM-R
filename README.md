@@ -3,10 +3,10 @@
 
 •O que você irá aprender neste projeto?
 
-Muitos estudantes quando iniciam seus estudos e precisam avaliar estatísticamente seus trabalhos, acabam
-se perdendo ou  se desesperando por ver equações estatísticas e cálculos complexos.
+Estudantes ao iniciarem seus estudos e necessitam avaliar estatísticamente seus trabalhos, acabam
+se perdendo ou  se desesperando ao se deparar com equações e conceitos complexos.
 
-Você que não entende 0% de estatística recomendo o livro "Descobrindo a Estatística usando SPPS" de Andy Field,
+Caso você seja leigo na ciência estatística, recomendo o livro "Descobrindo a Estatística usando SPPS" de Andy Field,
 é Fantástico na abordagem da estatística. Com uma linguagem amigável e divertida, você aprende o suficiente para
 desenvolver as análises do seu trabalho!
 
@@ -31,13 +31,15 @@ Quando seus dados possuem distribuição anormal, todos as análises deverão se
  
  4º Está normal? Se sim, ótimo, seguir adiantes com análises estatísticas.
  
- 5º Não esta normal? temos que normalizar, existe vários formas: remover amostras discrepantes (não recomenda-se, somente em casos com boa justificativas),  transformados (raiz, log, Ln, 1/x...) e substituíndo (não é o ideal).
+ 5º Não esta normal? temos que normalizar, existe vários formas: remover amostras discrepantes (não recomenda-se, somente em casos com boa justificativas),  transformando (raiz, log, Ln, 1/x...) e substituíndo (não é o ideal).
  
  6º Após a correção realize novamente os passos 1,2 e 3 e verifique se normalizou.
  
  7º Os dados normalizaram? Se sim, ótimo, agora daqui adiante todas análises deverão se adotadas seus dados transformados, e sempre destacar isso!
  
  8º Não normalizou? Avalie na literatura se seus dados apresentam essa anormalidade, caso verdadeiro, você deverá usa métodos estatísticos não - paramétricos. Caso isso não se justifique, descubra o motivo dessa anormalidade.
+ 
+ 9º Avalie o erro amostral do seu trabalho e se atende ao seu trabalho, isso dependerá muito do tipo população que você esta trabalhando. Por exemplo, erro amostral em um inventário florestal de eucalipto é tolerável até 10%, ja para estudos que envolve riscos, como na medicina <1%.
 
 
 
