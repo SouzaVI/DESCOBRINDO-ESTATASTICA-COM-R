@@ -9,16 +9,17 @@ library(car)
 library(fBasics)
 library(openxlsx)
 
-
+#-------------------------------------------------------------------------------
 #                            CARREGANDO DADOS
+#-------------------------------------------------------------------------------
 
 DADOS <- read_excel("DADOS.xlsx")
 
 #-------------------------------------------------------------------------------
-
-#                 AVALIANDO DISTRIBUICAO GRAFICAMENTE #
-
+#                 AVALIANDO DISTRIBUICAO GRAFICAMENTE
+#-------------------------------------------------------------------------------
 # 1º OPÇÃO
+
 hist(DADOS$Y,
      col = "#FF8C00",
      freq = F,
@@ -41,7 +42,6 @@ ggplot(DADOS)+
 # BOXPLOT
 
 boxplot(DADOS$Y,
-        ylab = "Carga de Material Combustível (T/ha)",
         col = "#FF8C00",
         border = "#4F4F4F",
         horizontal = F,
@@ -52,13 +52,14 @@ basicStats(DADOS$Y) # RESUMO ESTATISTICO BASICO
 
 #-------------------------------------------------------------------------------
 #                      AVALIANDO NORMALIDADE
+#-------------------------------------------------------------------------------
 summary(DADOS$Y)
 shapiro.test(DADOS$Y)
 qqnorm(DADOS$Y)
 qqline(DADOS$Y)
 qqPlot(DADOS$Y, dist='norm',envelope=.95)
 
-#-------------------------------------------------------------------------------
+
 #                                NOTA
 # DADOS APRESENTAM NORMALIDADE##
 # CASO SEUS DADOS NAO APRESENTAM DISTRIBUICAO NORMAL, VOCE DEVERA NORMALIZAR,
@@ -72,7 +73,7 @@ qqPlot(DADOS$Y, dist='norm',envelope=.95)
 ## VERIFICAR SE SEU NUMERO DE AMOSTRA E SUFICIENTE PARA ANALISES ESTATISTICA CONFIAVEL
 
 t=2.20009 # VALOR T - GRAU DE LIBERDADE (12-1 = 11) E ALFA 5%
-ERRO_PADRAO_DA_MEDIA = 2.34/sqrt(12) # raiz(desvio padrao/raiz(nº de amostra)) # verificar informacao no resumo estatistico do basicStasts
+ERRO_PADRAO_DA_MEDIA = 2.34/sqrt(12) # (desvio padrao/raiz(nº de amostra)) # verificar informacao no resumo estatistico do basicStasts
 media=mean(DADOS$Y)
 ERRO_AMOSTRAL = (ERRO_PADRAO_DA_MEDIA*t/media)*100
 
