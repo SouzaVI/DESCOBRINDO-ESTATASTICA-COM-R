@@ -41,7 +41,7 @@ desenvolver as análises do seu trabalho!
  
  9º Avalie o erro amostral do seu trabalho e se atende ao seu trabalho, isso dependerá muito do tipo população que você esta trabalhando. Por exemplo, erro amostral em um inventário florestal de eucalipto é tolerável até 10%, ja para estudos que envolve riscos, como na medicina <1%.
 
-**2. CORRELAÇÃO E REGRESSÃO
+**2. CORRELAÇÃO E REGRESSÃO**
 
   Na Segunda parte, trabalharemos com análise de correlação de Pearson (r²), para identificar se existe relação entre as duas variáveis Y e X. Trata-se de um procedimento importante para compreender o grau de interação que suas variáveis de entrada com a variável de saída Y. Não havendo essa interação, não há motivos na geração de equações estatísticas para predição da variável de saída.
 
