@@ -10,7 +10,7 @@ library(car)
 library(fBasics)
 library(GGally)
 library(dplyr)
-library(mctest, REdaS)
+
 #-------------------------------------------------------------------------------
 #                        CARREGANDO DADOS
 #-------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ modelo1<-lm(DADOS_R$Y ~ DADOS_R$X ) # Y= B0+ B1*X
 summary(modelo1)
 anova(modelo1)
 par(mfrow=c(2,2))
-plot(modelo1) # Diagnóstico completo dos
+plot(modelo1) # Diagnóstico completo dos modelos
 coef(modelo1)      # Coeficientes do modelo (intercepto e beta)
 predict(modelo1)   # Valores previstos pelo modelo
 residuals(modelo1) # Resíduos do modelo
@@ -47,14 +47,12 @@ residuals(modelo1) # Resíduos do modelo
 #                                NOTA
 #
 # A MULTICOLINEARIDADE EXISTE QUANDO OBSERVAMOS UMA FORTE CORRELACAO ENTRE DOIS
-# OU MAIS PREVISORES EM UM MODELO DE REGRESSAO. PARA UMA EQUAÇÃO
+# OU MAIS PREVISORES EM UM MODELO DE REGRESSAO. PARA UMA EQUACAO
 # MULTICOLINEARIDADE É UM PROBLEMA! POIS DIFICULTADA A AVALIACAO DOS PREVISORES
 # INDIVIDUALMENTE EM NOSSO EXEMPLO TEMOS SOMENTE UM PREVISOR, PORTANTO O TESTE,
 # NAO SE APLICA
 
 #-------------------------------------------------------------------------------
-
-#mctest::imcdiag(modelo1, method = "VIF", vif = 1) #teste de multicolinearidade
 
 #-------------------------------------------------------------------------------
 # PARA O ESTUDO O MODELO Y= B0+ B1*X , TEVE UM R²AJ = 0.979 E UM ERRO PADRAO

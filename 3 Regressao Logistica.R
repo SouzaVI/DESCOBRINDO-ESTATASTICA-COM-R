@@ -6,12 +6,14 @@ if(!require(tidyr)){install.packages("tidyr")}
 if(!require(ggplot2)){install.packages("ggplot2")}
 if(!require(broom)){install.packages("broom")}
 #-------------------------------------------------------------------------------
-
-# PARA A ANÁLISE SERÁ UTILIZADA DADOS DISPONIBILIZADO NO REPOSITORIO MTCAR
+# PARA A ANALISE SERA UTILIZADA DADOS DISPONIBILIZADO NO REPOSITORIO: MTCAR
+#-------------------------------------------------------------------------------
 
 data(mtcars)
-#------------------------------------------------------------------------------
 
+#-------------------------------------------------------------------------------
+#                             REGRESSAO LOGISTICA
+#-------------------------------------------------------------------------------
 mod <- glm(am~mpg,mtcars,family = binomial)
 summary(mod)
 
