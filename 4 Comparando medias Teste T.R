@@ -1,4 +1,5 @@
 #LIMPAR MEMORIA
+
 rm(list=ls(all=TRUE))
 #-------------------------------------------------------------------------------
 #                    TESTE t para amostras independentes
