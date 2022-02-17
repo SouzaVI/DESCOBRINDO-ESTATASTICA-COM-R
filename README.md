@@ -61,5 +61,14 @@ desenvolver as análises do seu trabalho!
 
 7º Gere os gráficos de Residuos x Estimados, Normal Q-Q e Cook distance, os gráficos darão um paranorama geral do comportamento de sua equação;
 
-8º Preze por equações que sejam replicaveis, modelos que tenham muitos previsores diferentes, acabam caindo na armadilha do super ajuste, ou seja, sua equação somente servirá pra aquele sua situação específica. O Proposito de gerar um um modelo é que outros pesquisadores tenham oportunidade de replicar e contribuir com o trabalho;
+8º Preze por equações que sejam replicaveis, modelos que tenham muitos previsores diferentes, acabam caindo na armadilha do super ajuste, ou seja, sua equação somente servirá pra aquele sua situação específica. O Proposito de gerar um um modelo é que outros pesquisadores tenham oportunidade de replicar e contribuir com o trabalho.
+
+**3. REGRESSÃO LOGISTICA**
+
+Nesse assunto iremos verificar como podemos prever uma variável de saída categórica utilizando a regressão logística. De forma geral, a regressão logística é uma regressão múltipla, no entanto, com variável resposta categórica dicotômica e variáveis previsoras contínuas ou categóricas.
+
+•Como funciona?
+
+"Um exemplo trivial é determinar que variáveis podem definir se uma pessoa é homem ou  mulher. Você poderá mensurar a preguiça, a  estupidez, o consumo de álcool, o número de  arrotos que a pessoa dá em um dia. Utilizando  a regressão logística, podemos verificar que  todas essas variáveis são capazes de prever o  gênero de uma pessoa, e a técnica nos apontará também se uma pessoa tem certa probabilidade de ser homem ou mulher. Assim, se você  pegar uma pessoa ao acaso e descobrir que ela  teve um escore alto em preguiça, estupidez,  consumo de álcool e número de arrotos, então  o modelo de regressão poderá nos dizer, com  base nessa informação, quão provável é que  essa pessoa seja homem".
+(**ANDY FIELD, DESCOBRINDO A ESTATÍSTICA USANDO SPSS p.221**)
 
