@@ -3,13 +3,15 @@ rm(list=ls(all=TRUE))
 #-------------------------------------------------------------------------------
 #                               PACOTES
 #-------------------------------------------------------------------------------
-library(readxl)
-library(ggplot2)
-library(ggpubr)
-library(car)
-library(fBasics)
-library(GGally)
-library(dplyr)
+
+
+if(!require(readxl)){install.packages("readxl")}
+if(!require(ggplot2)){install.packages("ggplot2")}
+if(!require(ggpubr)){install.packages("ggpubr")}
+if(!require(car)){install.packages("car")}
+if(!require(fBasics)){install.packages("fBasics")}
+if(!require(GGally)){install.packages("GGally")}
+
 
 #-------------------------------------------------------------------------------
 #                        CARREGANDO DADOS
