@@ -73,3 +73,4 @@ Nesse assunto iremos verificar como podemos prever uma variável de saída categ
 (**ANDY FIELD, DESCOBRINDO A ESTATÍSTICA USANDO SPSS p.221**)
 
 **4. COMPARANDO MÉDIA (TESTE t)**
+**5. ANOVA**
