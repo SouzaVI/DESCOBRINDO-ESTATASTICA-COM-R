@@ -3,7 +3,7 @@
 ### Objetivo do Projeto:
 O objetivo deste projeto é auxiliar estudantes e pesquisadores iniciantes a realizar análises estatísticas de forma prática e eficiente usando o ambiente R. Abordaremos desde a coleta de dados até a aplicação de análises estatísticas específicas, com ênfase em explorar a normalidade dos dados, análise de correlação e regressão, e a aplicação da regressão logística.
 
-### 📊 1. EXPLORANDO DADOS
+### 📈 1. EXPLORANDO DADOS
 
 #### Passos Importantes:
 1. Avaliar normalidade dos dados usando histograma e boxplot.
@@ -28,7 +28,7 @@ O objetivo deste projeto é auxiliar estudantes e pesquisadores iniciantes a rea
 7. Gerar gráficos de Resíduos x Estimados, Normal Q-Q e Cook Distance.
 8. Priorizar equações replicáveis para contribuir com a comunidade científica.
 
-### 🔄 3. REGRESSÃO LOGÍSTICA
+### 📈 3. REGRESSÃO LOGÍSTICA
 
 #### Aplicação da Regressão Logística:
 
